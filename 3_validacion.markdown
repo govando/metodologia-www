@@ -75,8 +75,4 @@ el límite para no llegar a él, por lo tanto los resultados obtenidos son bueno
 {% endfigure %}
 
 
-## Benchmarks
-
-
-
 [jekyll-organization]: https://github.com/jekyll

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Ejemplo de experimentación | Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</title>
+<meta name="generator" content="Jekyll v4.2.0">
+<meta property="og:title" content="Ejemplo de experimentación">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="/experimentacion/">
+<meta property="og:url" content="/experimentacion/">
+<meta property="og:site_name" content="Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Ejemplo de experimentación">
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Ejemplo de experimentación","url":"/experimentacion/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/descripcion/">Descripción</a><a class="page-link" href="/metodologia/">Metodología</a><a class="page-link" href="/modelos/">Modelos</a><a class="page-link" href="/validacion/">Validación de Metodología</a><a class="page-link" href="/experimentacion/">Ejemplo de experimentación</a><a class="page-link" href="/manual/">Manual de uso</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ejemplo de experimentación</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="descripción-del-escenario-de-experimentación">Descripción del escenario de experimentación</h2>
+
+<p>A continuación se describe el escenario y el contexto sobre el cual se realiza 
+la experimentación de la metodología. Estos datos corresponden a datos de entrada
+en la metodología.</p>
+
+<h3 id="lugar-geográfico-y-población">Lugar geográfico y población</h3>
+
+<p>La experimentación se realizó en base a datos conocidos y supuestos en torno al terremoto
+en Chile el año 2015. Se identificó al total de la población de la quinta región.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Emergencia: Terremoto
+Lugar: Quinta región
+Población total: 1.979.373 personas [1]
+Número de personas que evacuaron: 660.000 [2]
+Número aproximado de personas afectadas: 1.000.000
+</code></pre></div></div>
+
+<h3 id="aplicaciones-a-desplegar">Aplicaciones a desplegar</h3>
+
+<p>Asumimos el despliegue de 3 aplicaciones para este evento: Jayma, Ayni y Rimay. 
+Jayma tiene como misión reportar el estado actual de un usuario durante la 
+situación de crisis, entregando su localización, por este motivo asumimos
+el despliegue de una versión general para el uso de un porcentaje los 
+afectados (esto sin desmedro de la cantidad de réplicas de la aplicación 
+que se tengan que desplegar para cubrir la demanda). Respecto a las otras 2 aplicaciones,
+se busca realizar la coordinación de equipos de trabajo mediante Rimay
+y la coordinación de los voluntarios gracias a Ayni. Este esquema quedará distribuido con
+un Rimay por Institución u ONG, y un Ayni por cada Líder de equipo determinado por las 
+instituciones. Además, existirá un Rimay para coordinar el trabajo entre todas las instituciones.</p>
+
+<h3 id="numero-de-participantes-por-onginstituciones-y-de-población">Numero de Participantes por ONG/Instituciones y de población</h3>
+
+<p>La cantidad de ONG/Instituciones y el número de sus usuarios se detallan en Tabla 1, 
+donde “población” representa el número real de participantes por Institución, 
+el “% de part” representa el porcentaje de participantes por institución, obtenido 
+de noticias reales publicadas en la web [3, 4, 5, 6], con este porcentaje se obtuvieron
+el número de participantes, el número de Líderes por Institución se definió 
+arbitrariamente pensando en un número de voluntarios manejable por cada Líder. 
+Se destaca que la Institución “Movidos X Chile*” tiene como rol principal 
+coordinar las diversas ONG/Instituciones de voluntariado.</p>
+
+<figure>
+<table>
+  <thead>
+    <tr>
+      <th>Institución</th>
+      <th>Población</th>
+      <th>% de part.</th>
+      <th>Voluntarios</th>
+      <th>Líderes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Psicólogos Voluntarios</td>
+      <td>2000</td>
+      <td>80</td>
+      <td>1.600</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Techo</td>
+      <td>3157</td>
+      <td>80</td>
+      <td>2.526</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Cruz Roja Chilena</td>
+      <td>2250</td>
+      <td>80</td>
+      <td>1.800</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Universidad de Valparaíso</td>
+      <td>14000</td>
+      <td>10</td>
+      <td>1.400</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>Universidad de Viña del Mar</td>
+      <td>9000</td>
+      <td>20</td>
+      <td>1.800</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Pontificia Universidad Católica</td>
+      <td>29000</td>
+      <td>70</td>
+      <td>20.300</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Movidos X Chile *</td>
+      <td colspan="3">0</td>
+      <td>1</td>
+      
+      
+    </tr>
+    <tr>
+      <td colspan="3">Total-voluntarios</td>
+      <td>29.426</td>
+      <td>195</td>
+      
+      
+    </tr>
+  </tbody>
+</table>
+  <figcaption>Tabla 1</figcaption>
+</figure>
+
+<p>Adicionalmente, se estima de un 6% de la población afectada hace uso de la 
+aplicación Jayma (aproximadamente 1.000.000 de personas), para identificar
+los puntos de seguridad en la zona afectada e informar a sus cercanos su 
+estado actual, con lo cual el número de usuarios de Jayma ascendería a los 60.000.</p>
+
+<p>Se analizará el intervalo de una hora donde se asume un periodo crítico, en
+donde los usuarios usarán las aplicaciones. Se calcula la tasa de peticiones
+para cada tipo de aplicación usando la Fórmula 1.</p>
+
+<figure>
+<p><img src="/assets/experimentacion_formula_tasa_peticiones.png" alt="figura_1"></p>
+  <figcaption>Fórmula 1: fórmula para el calculo de la tasa de arribo de peticiones</figcaption>
+</figure>
+
+<p>Debido a que la metodología utiliza como unidad de tiempo los milisegundos, las tasas de 
+peticiones por usuario se estiman como <em>peticiones/milisegundo</em>, obteniendo así los resultados 
+de Tabla 2.</p>
+
+<figure>
+<table>
+  <thead>
+    <tr>
+      <th>Aplicaciones</th>
+      <th>Usuarios</th>
+      <th>Peticiones</th>
+      <th>Tiempo Peak (hora)</th>
+      <th>Tasa de arribo (peticiones/milisegundos)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ayni</td>
+      <td>29621 (voluntarios)</td>
+      <td>25</td>
+      <td>1</td>
+      <td>0.20570138888</td>
+    </tr>
+    <tr>
+      <td>Rimay</td>
+      <td>195 (Líderes)</td>
+      <td>100</td>
+      <td>1</td>
+      <td>0.00541666666</td>
+    </tr>
+    <tr>
+      <td>Jayma</td>
+      <td>60000 (Usuarios)</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0.42280555555</td>
+    </tr>
+  </tbody>
+</table>
+  <figcaption>Tabla 2</figcaption>
+</figure>
+
+<h3 id="infraestructura-simulada">Infraestructura simulada</h3>
+
+<p>La infraestructura simulada corresponde a datos reales obtenidos a través de encuestas, los
+cuales fueron publicados en Libro Blanco de este mismo proyecto (FONDEF IDeA ID15I20560).
+Para esta experimentación, se simularon 3 universidades: U. Católica del Norte, U. de Chile/CSN
+y U. de la Frontera. El número de servidores de cada uno son 1, 12 y 6 servidores respectivamente
+y se indica que las universidades se encuentran en 3 zonas distintas, Norte, Centro y Sur
+respectivamente.
+De esta forma, la infraestructura disponible es distribuida geográficamente a lo largo de Chile,
+como se muestra en Figura 1. En la metodología</p>
+
+<figure>
+<p><img src="/assets/experimentacion_despliegue_Experimental.png" alt="figura_1"></p>
+  <figcaption>Figura 1: distribución de infraestructura</figcaption>
+</figure>
+
+<p>Respecto a los tipos de máquinas virtuales se tiene solo uno.</p>
+
+<p>Otros datos de entrada a la metodología son:</p>
+<ul>
+  <li>Tolerancia a Fallas mínima: 1 (con 1 servidor caído, se debe seguir funcionando)</li>
+  <li>Nivel Multi-Zona: 2 (se debe desplegar en 2 zonas)</li>
+  <li>Utilización de recursos promedio: [40%-50%]</li>
+</ul>
+
+<h2 id="ejecución-de-la-metodología">Ejecución de la metodología</h2>
+
+<p>Los resultados de la ejecución de la metodología son los siguientes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Ayni:
+ * combinación de VMs:  [0, 10, 24] 
+ * utilización promedio sistema: 47.81%
+ * tiempo medio de respuesta del sistema: 151.43725964622155 ms
+ 
+- Rimay
+ * combinación de VMs:  [0, 1, 2]
+ * utilización promedio sistema: 23.00%
+ * tiempo medio de respuesta del sistema: 159.47641914350476 ms
+ 
+- Jayma:
+ * combinación de VMs:  [10, 35, 16]
+ * utilización promedio sistema: 48.59%
+ * tiempo medio de respuesta del sistema: 105.50141258161082 ms
+</code></pre></div></div>
+
+<p>La <em>combinación de VMs</em> mostrada en cada aplicación, representa de izquierda 
+a derecha las máquinas virtuales que se deberían desplegar en servidores de
+U. Católica del Norte, U. de Chile/CSN y U. de la Frontera. Así por ejemplo,
+para desplegar Rimay se recomienda desplegar 1 máquina virtual en servidores de U de 
+Chile/CSN y 2 servidores en U de la Frontera.</p>
+
+<p>Además, se muestra la utilización promedio de los recursos CPU.</p>
+
+<p>Para la simplificación del experimento, se asumió que cada instancia es 
+monolítica, encapsulando los diversos componentes que la conforman (Frontend, 
+Backend, DB). Sin embargo como se mencionó en la sección 
+<a href="/modelos">Implementación y Modelado, Modelo de Rendimiento</a>, 
+es posible realizar la separación de los componentes para ser desplegados
+independientemente.</p>
+
+<p>El despliegue propuesto no contempla el despliegue del componente Master 
+de Kubernetes, el cual debería ser replicado por zona.</p>
+
+<h2 id="especificaciones-técnicas">Especificaciones técnicas</h2>
+
+<p>La metodología se entrega como un software implementado en lenguaje Python 3.8.
+El núcleo del programa permite modelas infraestuctura como servidores, máquinas virtuales
+y aplicaciones, cada una con sus especificaciones por medio de archivos JSON.</p>
+
+<p>El programa fue desarrollado y probado en un computador con las
+siguientes características:</p>
+<ul>
+  <li>Sistema Operativo: Ubuntu 18.04</li>
+  <li>RAM: 32 GB</li>
+  <li>Disco Duro: 1 TB</li>
+  <li>Disco SSD: 1 TB</li>
+</ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</li>
+<li><a class="u-email" href="mailto:juan.ovando@usach.cl">juan.ovando@usach.cl</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/govando"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">govando</span></a></li>
+<li><a href="https://www.twitter.com/none"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">none</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

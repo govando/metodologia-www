@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Descripción | Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</title>
+<meta name="generator" content="Jekyll v4.2.0">
+<meta property="og:title" content="Descripción">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="/descripcion/">
+<meta property="og:url" content="/descripcion/">
+<meta property="og:site_name" content="Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Descripción">
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Descripción","url":"/descripcion/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/descripcion/">Descripción</a><a class="page-link" href="/metodologia/">Metodología</a><a class="page-link" href="/modelos/">Modelos</a><a class="page-link" href="/validacion/">Validación de Metodología</a><a class="page-link" href="/experimentacion/">Ejemplo de experimentación</a><a class="page-link" href="/manual/">Manual de uso</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Descripción</h1>
+  </header>
+
+  <div class="post-content">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h2 id="introducción">Introducción</h2>
+<p>Los estudios de planificación de capacidad (capacity planning) son adecuados para respaldar la 
+toma de decisiones en la gestión y el funcionamiento de aplicaciones que tienen una gran demanda
+ de utilización y requerimientos que deben ser atendidos y resueltos en el menor tiempo posible,
+ sobre todo en el caso de desastres de origen natural. Estas aplicaciones deben ser desplegadas
+ en grandes grupos de procesadores distribuidos. El planeamiento de capacidad permite
+ garantizar que se suministre oportunamente una cantidad suficiente de recursos 
+ computacionales para tratar de manera eficiente los flujos siempre cambiantes de las 
+ aplicaciones y los requerimientos de los usuarios sobre estas.</p>
+
+<p>Un estudio de planificación de la capacidad es una tarea compleja y que requiere mucho tiempo 
+cuando la colección de servicios y componentes que forman las aplicaciones sociales se 
+implementan y ejecutan en grupos de procesadores heterogéneos y distribuidos en una cloud. 
+Los servicios se alojan en componentes front-end y back-end, son desplegados con componentes 
+tecnológicos como Dockers y Kubernetes que permiten satisfacer ciertas características como 
+tolerancia a fallas, escalabilidad, elasticidad entre otras,  para lograr el objetivo de 
+mantener los tiempos de respuesta de las peticiones de usuarios y la utilización de los 
+recursos computacionales por debajo de los límites superiores predefinidos, y mantener la tasa
+de requerimientos totalmente procesadas por unidad de tiempo (rendimiento) al mismo nivel que 
+la tasa de llegada.</p>
+
+<p>La configuración de los <em>N</em> diferentes componentes de las aplicaciones se puede representar 
+como una tupla <em>N</em>-dimensional donde cada dimensión representa el número de réplicas o 
+particiones para cada componente. Debido a que los recursos (servidores) son heterogéneos, 
+el rendimiento de cada componente varía entre los <em>M</em> tipos de servidores disponibles, 
+aumentando así la complejidad del problema. Más aun, debido a que el despliegue se realiza 
+en <em>O</em> tipos de máquinas virtuales, el problema se complejiza aun más. De este modo, las 
+tuplas n-dimensional de un sistema homogéneo, se transforma en una tupla 
+<em>N</em>x<em>M</em>x<em>O</em>-dimensional.</p>
+
+<p>La selección de la configuración adecuada implica evaluar el rendimiento del sistema mediante 
+todas las configuraciones posibles en la búsqueda de una configuración tal que satisfaga objetivos
+como utilizar el menor número de procesadores y mantener el rendimiento de las consultas y los 
+límites del tiempo de respuesta.</p>
+
+<p>La metodología de planeamiento de capacidad desarrollada permite determinar el número de réplicas
+de cada componente de distintas aplicaciones, junto al respectivo despliegue eficiente y distribuido
+en instancias virtuales elásticas sobre un <em>cloud</em> nacional de clusters de servidores, con
+la finalidad de que las aplicaciones puedan escalar a medida que aumenta el número de usuarios,
+acotando los tiempos de respuesta, entregar tolerancia a fallas, y utilizar los recursos computacionales 
+eficientemente evitando la saturación de los mismos.</p>
+
+<p>La metodologı́a se obtuvo desarrollando un marco experimental que integró trazas reales de usuarios, 
+obtenidas por el pilotaje de aplicaciones sociales, combinadas con modelos basados en operaciones
+combinatoriales junto a fórmulas de análisis operacional y metaheurı́stica, tales que permiten estimar
+el rendimiento computacional de las aplicaciones por medio de las caracterı́sticas relevantes que influyen
+en el costo de ejecución.</p>
+
+<h2 id="contexto-del-trabajo">Contexto del trabajo</h2>
+
+<p>El contexto de este trabajo consiste de un grupo de aplicaciones heterogéneas (Figura 1), tanto desde el 
+punto de vista de su diseño, requerimiento de recursos computacionales, como cuellos de botella<br>
+que tiene cada una así como los flujos de procesamiento que genera cada tarea ejecutada en las 
+aplicaciones.</p>
+
+<figure>
+<p><img src="/assets/descripcion_apps.png" alt="figura_1"></p>
+  <figcaption>Figura 1: Aplicaciones sociales de soporte para desastres de origen
+ natural utilizadas para validar el sistema</figcaption>
+</figure>
+
+<p>La Figura 2 muestra un ejemplo del contexto planteado en este trabajo. Donde diferentes aplicaciones 
+desplegadas en componentes Front-end y Back-end tienen diferentes requerimientos de tiempo de 
+procesamiento en diferentes recursos tales como CPU, disco, red y memoria. Las aplicaciones son 
+desplegadas en máquinas virtuales heterogéneas las cuales a su vez son ejecutadas en servidores o 
+computadores con diferentes características de procesamiento.</p>
+
+<figure class="mis_figuras">
+<p><img src="/assets/descripcion_contexto.png" alt="figura_2"></p>
+  <figcaption>Figura 2: Contexto de infraestructura heterogénea e implicación en el
+rendimiento de la aplicación Rimay</figcaption>
+</figure>
+
+<p>Algunas limitaciones del trabajo se listan a continuación:</p>
+
+<ol>
+  <li>Geografía: distinguimos 3 zonas, separadas por miles de kilómetros: Norte, centro y sur de Chile</li>
+  <li>Cada zona cuenta con Clusters que alojan Servidores. Se conoce la Disponibilidad (Tiempo de 
+   Disponibilidad)</li>
+  <li>Los DC se interconectan mediante la Red Universitaria Nacional (REUNA)</li>
+  <li>Se conocen las ubicaciones y especificaciones técnicas de cada Servidor (CPUs, RAM, Disco)</li>
+  <li>Se definieron 3 tipos de VMs → chica, mediana, grande (limitación al problema)</li>
+  <li>Cada Componente se encuentra aislado en una VM</li>
+</ol>
+
+<p>Por medio de Benchmarks específicos por cada Componente de Aplicación, 
+se conocen los Tiempos de Servicio de cada Tipo de Petición 
+(en cada tipo de servidor y tipo de máquina virtual).</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</li>
+<li><a class="u-email" href="mailto:juan.ovando@usach.cl">juan.ovando@usach.cl</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/govando"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">govando</span></a></li>
+<li><a href="https://www.twitter.com/none"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">none</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

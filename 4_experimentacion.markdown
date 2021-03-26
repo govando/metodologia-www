@@ -48,7 +48,7 @@ arbitrariamente pensando en un número de voluntarios manejable por cada Líder.
 Se destaca que la Institución “Movidos X Chile*” tiene como rol principal 
 coordinar las diversas ONG/Instituciones de voluntariado.
 
-
+{% figure caption:"Tabla 1" %}
 | Institución | Población | % de part. | Voluntarios | Líderes |
 |-------|--------|---------|---------|---------|
 | Psicólogos Voluntarios | 2000 | 80 | 1.600| 16 |
@@ -59,8 +59,8 @@ coordinar las diversas ONG/Instituciones de voluntariado.
 |Pontificia Universidad Católica|29000|70|20.300|100|
 |Movidos X Chile *|0 |||1|
 |Total-voluntarios|||29.426|195|
+{% endfigure %}
 
-Tabla 1
 
 Adicionalmente, se estima de un 6% de la población afectada hace uso de la 
 aplicación Jayma (aproximadamente 1.000.000 de personas), para identificar
@@ -81,14 +81,14 @@ Debido a que la metodología utiliza como unidad de tiempo los milisegundos, las
 peticiones por usuario se estiman como *peticiones/milisegundo*, obteniendo así los resultados 
 de Tabla 2.
 
-
+{% figure caption:"Tabla 2" %}
 |Aplicaciones|Usuarios|Peticiones|Tiempo Peak (hora)|Tasa de arribo (peticiones/milisegundos)|
 |-------|-------|-------|-------|-------|
 |Ayni|29621 (voluntarios)|25|1|0.20570138888|
 |Rimay|195 (Líderes)|100|1|0.00541666666|
 |Jayma|60000 (Usuarios)|5|1|0.42280555555|
+{% endfigure %}
 
-Tabla 2
 
 ### Infraestructura simulada
 

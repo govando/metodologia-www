@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Metodología | Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</title>
+<meta name="generator" content="Jekyll v4.2.0">
+<meta property="og:title" content="Metodología">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="/metodologia/">
+<meta property="og:url" content="/metodologia/">
+<meta property="og:site_name" content="Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Metodología">
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Metodología","url":"/metodologia/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural">
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/descripcion/">Descripción</a><a class="page-link" href="/metodologia/">Metodología</a><a class="page-link" href="/modelos/">Modelos</a><a class="page-link" href="/validacion/">Validación de Metodología</a><a class="page-link" href="/experimentacion/">Ejemplo de experimentación</a><a class="page-link" href="/manual/">Manual de uso</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Metodología</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="metodología-de-2-pasos">Metodología de 2 Pasos</h2>
+
+<p>La metodología desarrollada contempla 2 grandes pasos, los cuales se entregan
+en la forma de módulos, y cada uno contiene sub módulos, como se muestra en Figura 1.</p>
+
+<figure>
+<p><img src="/assets/modelos_metod_2_pasos.png" alt="figura_1"></p>
+  <figcaption>Figura 1: Metodología de 2 pasos</figcaption>
+</figure>
+
+<h3 id="paso-1-planeamiento-de-capacidad-de-múltiples-aplicaciones">Paso 1: Planeamiento de Capacidad de múltiples Aplicaciones</h3>
+
+<h4 id="módulo-11-aosa-y-teoría-de-colas">Módulo 1.1 AOSA y Teoría de Colas</h4>
+
+<p>El primer paso tiene como objetivo obtener el número óptimo de VMs para soportar una
+carga de trabajo dada expresada como la tasa de peticiones entrantes por milisegundo a una 
+aplicación.</p>
+
+<p>El Espacio de Soluciones esta compuesto por tuplas de tipos de máquinas virtuales, las cuales son
+las variables independientes. Cada tipo de máquina virtual aloja un servicio específico, y pertenece
+un tipo de servidor. El tamaño de una tupla solución estará dado por el 
+número de sus <em>N</em> componentes, el <em>M</em> tipo de servidores y los <em>O</em> tipos de máquinas virtuales,
+resultando así en una tupla de tamaño <em>N</em>x<em>M</em>x<em>O</em>.</p>
+
+<p>El resultado de la tupla es la Utilización y Tiempo Medio de Respuesta, expresado como una 
+nueva tupla de igual tamaño, donde cada elemento respectivo indica la utilización promedio
+y el tiempo medio de respuesta sobre el sub conjunto de máquinas virtuales.</p>
+
+<p>En la Figura 2 se muestra como entran parámetros a la metodología y 
+se obtiene el Espacio de Soluciones de la forma mencionada. Se muestra
+en verde aquellas soluciones que no superan los límites de tiempo promedio de respuesta
+y la utilización, en rojo si ocurre lo contrario, es decir, una violación de servicio.</p>
+
+<figure>
+<p><img src="/assets/modelos_tuplas_solucion_resultado.png" alt="figura_2"></p>
+  <figcaption>Figura 2: Entradas, espacio de soluciones y resultados</figcaption>
+</figure>
+
+<p>El tamaño del <em>espacio de soluciones</em> para una aplicación
+está dado por el algoritmo de fuerza bruta.
+Por lo tanto, está en función del tamaño de la tupla solución 
+y los valores máximos, esto es, la tupla solución 0 (más info
+en <a href="#modelo-de-rendimiento-aosa-y-teor%C3%ADa-de-colas">Modelo de Rendimiento</a>).</p>
+
+<p>Para el ejemplo de Figura 2, se tiene como <em>tupla solución 0</em> -&gt; (9, 6, 4, 7, 5, 3)
+por lo tanto el número de tuplas soluciones esta dado por:</p>
+
+<p>[(9+1) * (6+1) * (4+1) * (7+1) * (5+1) * (3+1)] -1 = 67.199 combinaciones</p>
+
+<p>Los números en gris de la Figura 4 representan la cantidad máxima de VM que se necesita
+para  ejecutar las aplicaciones en un sistema computacional dada la menor utilización deseada. 
+Al combinar tipos de VMs, la aplicación del método AOSA se hace más compleja debido a la
+cantidad de variables que intervienen.</p>
+
+<p>Las soluciones en rojo no se consideran seguras y se descartarán en el siguiente módulo (módulo. 1.2)</p>
+
+<p>El algoritmo de lo descrito corresponde al módulo 1.1 y se muestra en Figura 3. Se calcula
+la cantidad máxima de réplicas para cada tipo de VM en cada Servidor. En la Imagen de la Figura 2,
+son los números marcados en gris. Ej., para la VM tipo L, en el Servidor 1 (en PM 1), se calcula 
+que se requieren 3 réplicas como máximo, para una utilización de 40% (mínima utilización). </p>
+
+<p>Luego, se itera y procesa cada combinación con Fuerza Bruta, desde la tupla [ 0 0 0 0 0 1]
+hasta la máxima [ 9 6 4 7 5 3 ]. En cada iteración, se calcula una carga de trabajo distribuida
+para cada sub conjunto de tipos de VMs con el objetivo de que la distribución sea equitativa. 
+Por cada tupla, se calcula la utilización y Tiempo Medio de Respuesta.</p>
+
+<p>La complejidad de utilizar AOSA está dada por:</p>
+<ul>
+  <li>Al existir servidores y VM heterogéneas, se complejiza la utilización directa de AOSA,
+ ya que asume que la carga de trabajo se distribuye equitativamente en las VMs.</li>
+  <li>Al aplicar AOSA directamente en nuestro escenario heterogéneo, se sub-utilizarían recursos: 
+ Ej. si existen 2 VMs, de 2 y 6 CPUs, AOSA entregará resultados tal que la carga de trabajo 
+ se distribuye en partes iguales, es decir, la VM de 2 CPU tendrá sobre-utilización y la de
+ 6 CPU sub-utilización</li>
+</ul>
+
+<figure>
+<p><img src="/assets/modelos_paso1.1.png" alt="figura_3"></p>
+  <figcaption>Figura 3: algoritmo de módulo 1.1</figcaption>
+</figure>
+
+<h3 id="módulo-12-políticas-y-algoritmos-de-tolerancia-a-fallas">Módulo 1.2 Políticas y Algoritmos de Tolerancia a Fallas</h3>
+
+<p>Dado el Espacio de Soluciones (posibles despliegues), se debe encontrar la solución óptima para
+desplegar. Se considera como óptimo para nuestro contexto: Sistema desplegado que sea estable
+incluso ante posibles fallas.</p>
+
+<p>Los pasos a realizar se muestran en Figura 4 y son los siguientes:</p>
+<ul>
+  <li>Remover Soluciones no Seguras por utilización: Se descartan las soluciones con utilización mayor al 80%</li>
+  <li>Remover Solución si no cumple criterio Multi-Zona: parámetro de entrada: Multi-Zona, que es
+ un entero e indica en cuántas Zonas se desea desplegar la App. 
+ Por ejemplo, para Bases de datos se recomienda un 3 (o un número impar). Se descartan 
+ las soluciones que no cumplan:
+ $$SUMA (VMs) &gt;= nivel\_multi\_zona$$ 
+ por ejemplo, si se desea un nivel_multi_zona = 3, no sirve una solución que contemple solo 2 VMs.</li>
+  <li>Análisis de Tolerancia a fallas: parámetro de entrada: número mínimo de réplicas. Dada la 
+ tupla de VMs de la solución, se remueven (replicas-1) VMs (se remueven las que tengan mayor
+  número de CPU). Luego se calcula la utilización y tiempo medio de respuesta sobre la nueva tupla.
+  Estos nuevos parámetros se almacenan en la solución como <em>parámetros ante degradación de servicio</em>. </li>
+</ul>
+
+<figure>
+<p><img src="/assets/modelos_paso1.2.png" alt="figura_4"></p>
+  <figcaption>Figura 4: algoritmo de módulo 1.2</figcaption>
+</figure>
+
+<p>Luego se genera un Ranking de Rendimiento por aplicación, el cual es una
+heurística basada en Tiempo de Ejecución en cada tipo de sistema y Peticiones entrantes $\lambda$
+(Figura 5).
+Se busca obtener el menor valor posible. El significado de esto es encontrar los servidores
+donde las aplicaciones se ejecuten más rápido.</p>
+
+<figure>
+<p><img src="/assets/modelos1.2__ranking.png" alt="figura_5"></p>
+  <figcaption>Figura 5: Ranking de rendimiento</figcaption>
+</figure>
+
+<h2 id="paso-2-despliegue-de-aplicaciones">Paso 2 despliegue de aplicaciones</h2>
+
+<p>Objetivo: Desplegar cada uno de los componentes de una aplicación de manera que el
+despliegue sea tolerante a fallas y de alta disponibilidad</p>
+
+<p>Tolerancia a fallas: replicación (entregada de soluciones del módulo anterior)
+Alta disponibilidad: selección de Clusters resilientes</p>
+
+<p>Objetivo:
+Generar un ranking de prioridades de Clusters según sus datos de disponibilidades conocidas</p>
+
+<p>Método usado: Heurística basada en una fórmula matemática para generar un Ranking (Figura 6)</p>
+
+<p>El Paso Ranking (módulos 2.1 y 2.2) sirven para hacer una heurística en el paso del despliegue. 
+La salida del módulo 1.1 sirve se utiliza como entrada para el Paso 2, en el Paso Despliegue, 
+se partan seleccionando los Cluster que sean más resilientes, pensando en que en un contexto de 
+Catástrofe, esto sería algo prioritario. Por ejemplo, un Cluster con UPS 
+(u otro tipo de soportes eléctricos) debería tener una mayor Disponibilidad histórica que uno sin UPS. </p>
+
+<figure>
+<p><img src="/assets/modelos_ranking_resiliencia.png" alt="figura_5"></p>
+  <figcaption>Figura 5: Ranking de rendimiento</figcaption>
+</figure>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Despliegue Eficiente de Aplicaciones Sociales sobre un Cloud heterogéneo para Situaciones de Desastres de Origen Natural</li>
+<li><a class="u-email" href="mailto:juan.ovando@usach.cl">juan.ovando@usach.cl</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/govando"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">govando</span></a></li>
+<li><a href="https://www.twitter.com/none"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">none</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
