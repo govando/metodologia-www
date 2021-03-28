@@ -37,7 +37,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/descripcion/">Descripción</a><a class="page-link" href="/metodologia/">Metodología</a><a class="page-link" href="/modelos/">Modelos</a><a class="page-link" href="/validacion/">Validación de Metodología</a><a class="page-link" href="/experimentacion/">Ejemplo de experimentación</a><a class="page-link" href="/manual/">Manual de uso</a>
+<a class="page-link" href="/descripcion/">Descripción</a><a class="page-link" href="/metodologia/">Metodología</a><a class="page-link" href="/validacion/">Validación de Metodología</a><a class="page-link" href="/experimentacion/">Ejemplo de experimentación</a><a class="page-link" href="/manual/">Manual de uso</a>
 </div>
       </nav>
 </div>
@@ -51,7 +51,9 @@
   </header>
 
   <div class="post-content">
-    <h2 id="metodología-de-2-pasos">Metodología de 2 Pasos</h2>
+    <p>En esta sección se muestran los 2 pasos de la metodología y el modelo de clases.</p>
+
+<h2 id="metodología-de-2-pasos">Metodología de 2 Pasos</h2>
 
 <p>La metodología desarrollada contempla 2 grandes pasos, los cuales se entregan
 en la forma de módulos, y cada uno contiene sub módulos, como se muestra en Figura 1.</p>
@@ -191,6 +193,24 @@ Catástrofe, esto sería algo prioritario. Por ejemplo, un Cluster con UPS
 <figure>
 <p><img src="/assets/modelos_ranking_resiliencia.png" alt="figura_5"></p>
   <figcaption>Figura 5: Ranking de rendimiento</figcaption>
+</figure>
+
+<h2 id="modelo-de-metodología">Modelo de metodología</h2>
+
+<p>En la Figura 6 se muestra el diagrama de clases de la metodología y el escenario que se modela.
+Las clases enmarcadas en “Modelo de escenario” son las encargadas de modelar el escenario generando
+zonas geográficas, clusters, servidores, máquinas virtuales, aplicaciones, componentes y los
+datos de sus benchmarks, instancias de despliegues y soluciones.</p>
+
+<p>Además existen clases que cuentan con algoritmos con políticas y métodos analíticos para mantener
+el sistema estable.</p>
+
+<p>Todo esto es usado en la clase principal “Environment” el cual genera todo el entorno a partir
+de 3 archivos JSON los cuales deben ser editados por el usuario para modificar el escenario.</p>
+
+<figure>
+<p><img src="/assets/diagrama_clase_metodologia.png" alt="figura_1"></p>
+  <figcaption>Figura 6: diagrama de clases de metodología</figcaption>
 </figure>
 
 

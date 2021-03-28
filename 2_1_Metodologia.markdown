@@ -6,6 +6,8 @@ resource: true
 categories: [Indice]
 ---
 
+En esta sección se muestran los 2 pasos de la metodología y el modelo de clases.
+
 ## Metodología de 2 Pasos
 
 La metodología desarrollada contempla 2 grandes pasos, los cuales se entregan
@@ -144,6 +146,25 @@ Catástrofe, esto sería algo prioritario. Por ejemplo, un Cluster con UPS
 
 {% figure caption:"Figura 5: Ranking de rendimiento" %}
 ![figura_5](/assets/modelos_ranking_resiliencia.png)
+{% endfigure %}
+
+
+## Modelo de metodología
+
+En la Figura 6 se muestra el diagrama de clases de la metodología y el escenario que se modela.
+Las clases enmarcadas en "Modelo de escenario" son las encargadas de modelar el escenario generando
+zonas geográficas, clusters, servidores, máquinas virtuales, aplicaciones, componentes y los
+datos de sus benchmarks, instancias de despliegues y soluciones.
+
+Además existen clases que cuentan con algoritmos con políticas y métodos analíticos para mantener
+el sistema estable.
+
+Todo esto es usado en la clase principal "Environment" el cual genera todo el entorno a partir
+de 3 archivos JSON los cuales deben ser editados por el usuario para modificar el escenario.     
+
+
+{% figure caption:"Figura 6: diagrama de clases de metodología" %}
+![figura_1](/assets/diagrama_clase_metodologia.png)
 {% endfigure %}
 
 
